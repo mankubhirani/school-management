@@ -13,6 +13,7 @@ export class ConfigService {
   public readonly teachersUrl = `${this.baseUrl}/teachers`;
   public readonly classesUrl = `${this.baseUrl}/classes`;
   public readonly subjectsUrl = `${this.baseUrl}/subjects`;
+  public readonly registerUrl = `${this.baseUrl}/users/register`;
 
   constructor() {}
 }
