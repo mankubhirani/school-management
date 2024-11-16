@@ -4,9 +4,10 @@ import { RegistrationComponent } from './auth/registration/registration.componen
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './auth/dashboard/dashboard.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { ToasterComponent } from './shared/shared/toaster/toaster.component';
 
 const routes: Routes = [
-  { path: '', component: NavbarComponent },
+  { path: '', component: ToasterComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '**', redirectTo: '' }

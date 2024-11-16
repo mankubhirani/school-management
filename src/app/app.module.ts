@@ -21,8 +21,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';  // Add FormsModule and ReactiveFormsModule
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToasterComponent } from './shared/shared/toaster/toaster.component';  // Add FormsModule and ReactiveFormsModule
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';  // Add Forms
     LoginComponent,
     DashboardComponent,
     MainComponent,
+    ToasterComponent,
     // You can declare more components here as needed
   ],
   imports: [
@@ -51,7 +53,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';  // Add Forms
     MatInputModule,
     MatButtonModule,
     MatSelectModule,  // Added MatSelectModule
-    MatOptionModule 
+    MatOptionModule ,
+    ToastrModule.forRoot({
+      positionClass: 'toast-right', // Change this to set the position
+      preventDuplicates: true, // Optional: Prevent duplicate notifications
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
