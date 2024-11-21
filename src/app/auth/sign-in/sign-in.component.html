@@ -1,1 +1,44 @@
-<p>sign-in works!</p>
+
+<div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+    <div class="row shadow-lg rounded bg-white overflow-hidden" style="max-width: 900px; width: 100%;">
+      <!-- Left Section: Image -->
+      <div class="col-md-6 p-0">
+        <div class="h-100 d-flex align-items-center justify-content-center" style="background: url('/assets/register-bg.jpg') no-repeat center center/cover;">
+          <h1 class="text-white text-center fw-bold">Welcome Back!</h1>
+        </div>
+      </div>
+  
+      <!-- Right Section: Form -->
+      <div class="col-md-6 p-5">
+        <h2 class="text-center mb-4">Sign In</h2>
+        <form (submit)="onSubmit()">
+          <!-- Email -->
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" [(ngModel)]="user.email" name="email" required>
+          </div>
+  
+          <!-- Password -->
+          <div class="form-group mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" [(ngModel)]="user.password" name="password" required>
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100 mb-3">Sign In</button>
+  
+          <!-- Google Login -->
+          <button type="button" class="btn btn-outline-danger w-100 mb-3" (click)="onGoogleLogin()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Logo" width="20" class="me-2">
+            Sign In with Google
+          </button>
+  
+          <!-- Links -->
+          <p class="text-center mt-3">
+            Don't have an account? <a routerLink="/signup" class="text-primary">Register Now</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,41 @@
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  .hero-section {
+    height: 100vh;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .features-section {
+    padding: 50px 0;
+  }
+  .feature-icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  .testimonials {
+    background: #f8f9fa;
+    padding: 50px 0;
+  }
+  .footer {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .animate-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-in-out;
+  }
+  .animate-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
