@@ -10,10 +10,7 @@ import { AttendanceModule } from './modules/attendance/attendance.module';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { RegistrationComponent } from './auth/registration/registration.component';
-import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './auth/dashboard/dashboard.component';
-import { MainComponent } from './auth/main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -24,17 +21,22 @@ import { MatOptionModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToasterComponent } from './shared/shared/toaster/toaster.component';  // Add FormsModule and ReactiveFormsModule
 import { ToastrModule } from 'ngx-toastr';
+import { LandingPageComponent } from './auth/landing-page/landing-page.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
     SidebarComponent,
-    RegistrationComponent,
-    LoginComponent,
+  
     DashboardComponent,
-    MainComponent,
+
     ToasterComponent,
+     LandingPageComponent,
+     LoginComponent,
+     SignInComponent,
     // You can declare more components here as needed
   ],
   imports: [
